@@ -1,9 +1,9 @@
-import Trending from "./components/trending";
-import Tech from "./components/tech";
-import Travel from "./components/travel";
-import Other from "./components/other";
-import Subscribe from "./components/subscribe";
-import Sidebar from "./components/sidebar";
+import Trending from "@/app/(home)/components/trending";
+import Tech from "@/app/(home)/components/tech";
+import Travel from "@/app/(home)/components/travel";
+import Other from "@/app/components/other";
+import Subscribe from "@/app/(home)/components/subscribe";
+import Sidebar from "@/app/components/sidebar";
 
 export default function Home() {
   return (
