@@ -4,8 +4,12 @@ import Travel from "@/app/(home)/components/travel";
 import Other from "@/app/components/other";
 import Subscribe from "@/app/components/subscribe";
 import Sidebar from "@/app/components/sidebar";
+import getPosts from "@/actions/getPosts";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPosts();
+  console.log(posts);
+ 
   return (
     <main className="px-10 leading-7">
       <Trending />
