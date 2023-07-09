@@ -20,6 +20,11 @@ const TrendingCard = ({ className, post }: TrendingCardProps) => {
           style={{ objectFit: "cover" }}
           src={post?.image}
           alt="Image"
+          placeholder="blur"
+          sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 75vw,
+                (max-width: 1060px) 50vw,
+                33vw"
         />
       </div>
       <div className="absolute z-1 top-0 left-0 w-full h-full bg-gradient-gradual" />

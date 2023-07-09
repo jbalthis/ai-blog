@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SocialLinks from "./social-links";
+import Ad1 from "../../public/assets/ad-1.jpg";
 
 const Navbar = () => {
   return (
@@ -27,7 +28,17 @@ const Navbar = () => {
           </p>
         </div>
         <div className="basis-full relative w-auto h-32 bg-wh-500">
-          Image Right Here
+          <Image
+            fill
+            style={{ objectFit: "cover" }}
+            src={Ad1}
+            alt="advert-1"
+            placeholder="blur"
+            sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 75vw,
+                (max-width: 1060px) 50vw,
+                33vw"
+          />
         </div>
       </div>
       <hr />
