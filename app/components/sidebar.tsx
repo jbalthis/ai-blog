@@ -4,7 +4,7 @@ import Subscribe from "./subscribe";
 
 const Sidebar = () => {
   return (
-    <section>
+    <section> 
       <h4 className="bg-wh-900 py-3 px-5 text-wh-50 text-center text-xs font-bold">
         Subscribe and Follow
       </h4>

@@ -1,7 +1,12 @@
 import React from "react";
 import Card from "@/app/components/card";
+import { Post } from "@prisma/client";
 
-const Travel = () => {
+type Props = {
+  posts: Post[];
+};
+
+const Travel = ({ posts }: Props) => {
   return (
     <section className="mt-10">
       <hr className="border-1" />
@@ -16,13 +21,26 @@ const Travel = () => {
 
       {/* CARDS ROW */}
       <div className="sm:flex justify-between gap-8">
-        <Card className="basis-1/3 bg-wh-500 mt-5 sm:mt-0" imageHeight="h-80" />
-        <Card className="basis-1/3 bg-wh-500 mt-5 sm:mt-0" imageHeight="h-80" />
-        <Card className="basis-1/3 bg-wh-500 mt-5 sm:mt-0" imageHeight="h-80" />
+        <Card
+          post={posts[0]}
+          className="basis-1/3 mt-5 sm:mt-0"
+          imageHeight="h-80"
+        />
+        <Card
+          post={posts[1]}
+          className="basis-1/3 mt-5 sm:mt-0"
+          imageHeight="h-80"
+        />
+        <Card
+          post={posts[2]}
+          className="basis-1/3  mt-5 sm:mt-0"
+          imageHeight="h-80"
+        />
       </div>
 
       <Card
-        className="sm:flex bg-wh-500 justify-between items-center gap-3 mt-7 mb-5"
+        post={posts[3]}
+        className="sm:flex justify-between items-center gap-3 mt-7 mb-5"
         imageHeight="h-80"
       />
     </section>

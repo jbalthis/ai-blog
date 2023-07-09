@@ -10,7 +10,7 @@ import Discord from "public/assets/social_discord.png";
 type Props = {
   isDark?: boolean;
 };
-
+ 
 const SocialLinks = ({ isDark = false }: Props) => {
   return (
     <div className="flex justify-between items-center gap-7">

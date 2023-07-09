@@ -4,20 +4,24 @@ import Travel from "@/app/(home)/components/travel";
 import Other from "@/app/components/other";
 import Subscribe from "@/app/components/subscribe";
 import Sidebar from "@/app/components/sidebar";
-import getPosts from "@/actions/getPosts";
+import getPosts from "../actions/get-posts";
+import { formatPosts } from "@/libs/utils";
+
+export const revalidate = 60;
 
 export default async function Home() {
   const posts = await getPosts();
-  console.log(posts);
- 
+  const [travelPosts, techPosts, otherPosts, trendingPosts] =
+    formatPosts(posts);
+
   return (
     <main className="px-10 leading-7">
-      <Trending />
+      <Trending posts={trendingPosts} />
       <div className="md:flex gap-10 mb-10">
         <div className="basis-3/4">
-          <Tech />
-          <Travel />
-          <Other />
+          <Tech posts={techPosts} />
+          <Travel posts={travelPosts} />
+          <Other posts={otherPosts} />
           <div className="hidden md:block">
             <Subscribe />
           </div>

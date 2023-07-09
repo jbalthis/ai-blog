@@ -17,7 +17,7 @@ const Footer = () => {
             <i>&copy; BarelyJason.Online, All Rights Reserved</i>
           </p>
         </div>
-
+  
         {/* SECOND COLUMN */}
         <div className="mt-16 basis-1/4 sm:mt-0">
           <h4 className="font-bold">Links</h4>

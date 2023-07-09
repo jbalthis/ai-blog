@@ -8,7 +8,7 @@ const Subscribe = () => {
     setEmail(e.target.value);
   };
 
-  return (
+  return ( 
     <div className="text-center bg-wh-10 px-5 py-10">
       <h4 className="font-bold text-base">Subscribe To Our Newsletter</h4>
       <p className="my-3 w-5/6 mx-auto text-wh-500">
