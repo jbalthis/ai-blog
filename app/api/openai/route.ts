@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { AxiosResponse } from "axios";
 import { CreateChatCompletionResponse } from "openai";
 
-export async function PATCH(request: Request) {
+export async function POST(request: Request) {
   try {
     const { title, role } = await request.json();
 
@@ -24,10 +24,6 @@ export async function PATCH(request: Request) {
         ],
       });
 
-    console.log(
-      "AI_RESPONSE: " + "\n" + aiResponse.data.choices[0].message?.content
-    );
-
     return NextResponse.json(
       {
         content: aiResponse.data.choices[0].message?.content,
@@ -35,7 +31,7 @@ export async function PATCH(request: Request) {
       { status: 200 }
     );
   } catch (error: any) {
-    console.log("OPENAI_PATCH_ERROR", error);
+    console.log("OPENAI_REQUEST_ERROR", error);
     return NextResponse.json(
       { error: "error updating openai route" },
       { status: 500 }
