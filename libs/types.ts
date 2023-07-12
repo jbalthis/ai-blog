@@ -1,11 +1,11 @@
-export type Post = {
+export type FormattedPost = {
   id: string;
-  createdAt: string;
-  updatedAt: string;
   title: string;
   category: string;
-  content: string;
   author: string;
+  content: string;
   image: string;
   snippet: string;
+  createdAt: string;
+  updatedAt: string;
 };
