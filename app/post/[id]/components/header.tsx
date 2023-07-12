@@ -27,7 +27,9 @@ const Header = ({
             onChange={onChange}
             value={title}
           />
-          {titleError && <p className="mt-1 text-primary-500">{titleError}</p>}
+          {titleError && (
+            <p className="mt-1 text-accent-red font-bold">{titleError}</p>
+          )}
         </div>
       ) : (
         <h3 className="font-bold text-3xl mt-3">{title}</h3>
